@@ -10,11 +10,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const currentHour = new Date();
-const hour = currentHour.getHours();
+const hour = 17;
 const customStyle = {
-  color: "red",
-  fontSize: "20px",
-  border: "1px solid black"
+  color: "red"
 };
 
 let greeting;
@@ -34,7 +32,7 @@ if (hour < 12) {
 }
 
 ReactDOM.render(
-  <h1 style={customStyle}>
+  <h1 className="heading" style={customStyle}>
     {greeting}! Now is {hour} in the {greeting2}!
   </h1>,
   document.getElementById("root")
